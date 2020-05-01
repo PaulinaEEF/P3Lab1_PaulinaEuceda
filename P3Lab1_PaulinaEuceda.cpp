@@ -20,24 +20,20 @@ int main(int argc, char** argv) {
 		int numeroRandom;
 		srand((unsigned)time(0));
 		
-		
-		
-		
 		while(flagSuma == false && suma<= numeroIngresado){
 			bool flagPrimo1=false, flagPrimo2 = false;
+			
 			while(flagPrimo1 == false){
 				numeroRandom = rand() % numeroIngresado;
-				
 				int avanzador=1;
 				int factores = 0;
+				
 				while(avanzador<=numeroRandom){
 						
 					if(numeroRandom % avanzador == 0){
 						factores++;
 					}
-				
 					avanzador++;
-					
 					
 				}
 				if(factores == 2){
@@ -50,14 +46,13 @@ int main(int argc, char** argv) {
 				numeroRandom = rand() % numeroIngresado;
 				int avanzador=1;
 				int factores = 0;
+				
 				while(avanzador<=numeroRandom){
 						
 					if(numeroRandom % avanzador == 0){
 						factores++;
 					}
-				
 					avanzador++;
-					
 					
 				}
 				if(factores == 2){
@@ -66,25 +61,16 @@ int main(int argc, char** argv) {
 					
 				}
 			}
-			
-			
 			if(primo1 + primo2 == suma){
 				cout << primo1 << " + " << primo2 << " = " << suma<< endl;
 				suma = suma + 2;
 			}
 
-
 			if(suma == (numeroIngresado+2)){
 				flagSuma = true;
 			}
-			
-			
-		}
-		
-		
-		
-		
-		
+				
+		}	
 	}
 	else{
 		cout << "Debe ser menor que 100. Gracias";
